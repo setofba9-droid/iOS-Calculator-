@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  width: 414px;
+  height: 896px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.result span {
+  font-size: 96px;
+  font-weight: 300;
+  text-align: right;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 45px;
+  background-color: #000;
+}
+
+.item {
+  width: 85px;
+  height: 85px;
+  border-radius: 50px;
+  border: none;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  transition: filter 0.2s;
+}
+
+.item:hover {
+  filter: brightness(130%);
+}
+
+.item:active {
+  filter: brightness(150%);
+}
+
+/* أزرار رمادية (C, +/-, %) */
+.clear, .negative,.persent sign {
+  background-color: #a5a5a5;
+  color: #000;
+}
+
+/* أزرار الأرقام والنقطة */
+.numbers, .comma{
+  background-color: #333;
+  color: white;
+}
+
+/* زر الصفر */
+.itemZero {
+  background-color: #333;
+  color: white;
+  width: 185px !important;
+  border-radius: 45px !important;
+  grid-column: span 2;
+  justify-content: flex-start;
+  padding-left: 35px;
+}
+
+/* أزرار العمليات */
+.sign, .iquals {
+  background-color: #ff9f0a;
+  color: white;
+}
+
+/* تعديل خاصية الـ grid لزر الصفر */
+.buttons button:nth-child(17) { /* زر الصفر */
+  grid-column: 1 / span 2;
+  grid-row: 5;
+}
+
+.buttons button:nth-child(18) { /* النقطة */
+  grid-column: 3;
+  grid-row: 5;
+}
+
+.buttons button:nth-child(19) { /* زر يساوي */
+  grid-column: 4;
+  grid-row: 5;
+}
